@@ -1,13 +1,163 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+/***************
+* General Styles
+****************/
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  padding: 0;
+}
+
+body {
+  background: #f8f8f8;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+  color: white;
+  font-weight: normal;
+  font-size: 2rem;
+  margin-bottom: .5em;
 }
+
+h2 {
+  margin-bottom: .5em
+}
+
+p {
+  margin-bottom: 1em
+}
+
+a {
+  text-decoration: none;
+}
+
+/***************
+* Layout Styles
+****************/
+
+header {
+  position: absolute;
+  z-index: 99;
+}
+
+header a {
+  color: white;
+}
+
+.title-container {
+  max-width: 430px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.container.meals {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-gap: 20px;
+}
+
+.hero {
+  background-image: url('./images/banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 425px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+}
+
+/***************
+* Components
+****************/
+
+.search-btn {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.search-btn i {
+  color: #929292;
+}
+
+.card {
+  box-shadow: 1px 8px 15px rgba(0,0,0,.07);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: white;
+}
+
+.card.recipe {
+  max-width: 750px;
+  margin: 0 auto;
+  cursor: default;
+}
+
+.card.recipe img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.back {
+  max-width: 750px;
+  margin: 0 auto 1em;
+  display: block;
+}
+
+
+/***************
+* Elements
+****************/
+
+input {
+  border: none;
+  width: 100%;
+  height: 35px;
+  color: black;
+  padding: .5em;
+  border-radius: 3px;
+  font-size: .9rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.recipe-instructions {
+  padding: 2em;
+}
+
+.meal-title {
+  color: black;
+}
+
+.meal-image {
+  width: 100%;
+  min-height: 325px;
+  object-fit: cover;
+}
+
+.meal-title {
+  display: block;
+  text-align: center;
+  padding: 0 0 .5em;
+}
+
+
